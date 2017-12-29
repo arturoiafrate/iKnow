@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13196" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="KGInimitableOriginal.ttf">
+            <string>KGInimitableOriginal</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="firstView" id="BYZ-38-t0r" customClass="FirstViewController" customModule="iKnow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iKnowTvBackground" translatesAutoresizingMaskIntoConstraints="NO" id="oeT-Qh-g89" userLabel="appLogo">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wait1" translatesAutoresizingMaskIntoConstraints="NO" id="c28-2T-uda" userLabel="waitingImageLabel">
+                                <rect key="frame" x="66" y="896" width="1492" height="147"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="zna-YU-66r" userLabel="timerImage">
+                                <rect key="frame" x="1246" y="606" width="240" height="249"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="timerImage" destination="zna-YU-66r" id="PpD-xj-LDb"/>
+                        <outlet property="waitImage" destination="c28-2T-uda" id="Cbm-1G-w0p"/>
+                        <segue destination="APw-IU-e8B" kind="show" identifier="playGameSegue" id="pfE-Ti-dW3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6" y="69"/>
+        </scene>
+        <!--infoScreen-->
+        <scene sceneID="A0d-YA-I3N">
+            <objects>
+                <viewController storyboardIdentifier="infoScreen" title="infoScreen" id="APw-IU-e8B" customClass="InfoScreen" customModule="iKnow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xei-hX-gZA"/>
+                        <viewControllerLayoutGuide type="bottom" id="EfP-qR-gKx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nfs-c9-Wui">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyBackground" translatesAutoresizingMaskIntoConstraints="NO" id="YrL-qt-epT">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="color0" translatesAutoresizingMaskIntoConstraints="NO" id="SYZ-D5-ouY" userLabel="playerColor">
+                                <rect key="frame" x="61" y="133" width="224" height="224"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUE-su-8qI">
+                                <rect key="frame" x="377" y="133" width="1430" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KGInimitableOriginal" family="KG Inimitable Original" pointSize="200"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJ4-pj-Ovx" userLabel="categoryName">
+                                <rect key="frame" x="262" y="745" width="1430" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KGInimitableOriginal" family="KG Inimitable Original" pointSize="140"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="choosedCategory" translatesAutoresizingMaskIntoConstraints="NO" id="DTT-eG-RHg" userLabel="choosedCategory">
+                                <rect key="frame" x="262" y="410" width="1397" height="261"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="categoryLabel" destination="YJ4-pj-Ovx" id="RW5-2y-pyq"/>
+                        <outlet property="playerColorImage" destination="SYZ-D5-ouY" id="Dpb-HT-9S6"/>
+                        <outlet property="playerNameLabel" destination="WUE-su-8qI" id="hsF-5D-NLb"/>
+                        <segue destination="IJ5-3F-bBN" kind="show" identifier="showVideoSegue" id="gsj-uq-wUh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I7O-MA-Qp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2715" y="69"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="w4t-th-3bJ">
+            <objects>
+                <viewController id="IJ5-3F-bBN" customClass="GameViewController" customModule="iKnow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F9V-eZ-S4n"/>
+                        <viewControllerLayoutGuide type="bottom" id="r3N-1y-kJa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IL5-7p-2df">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyBackground" translatesAutoresizingMaskIntoConstraints="NO" id="IaE-UD-PgQ" userLabel="defaultBackground">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <segue destination="APw-IU-e8B" kind="show" identifier="backToInfoSegue" id="U6B-Pu-YZI"/>
+                        <segue destination="COg-U4-ck4" kind="show" identifier="showRankView" id="2Jx-Tx-zKW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RiV-8G-Lhi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5261" y="-721"/>
+        </scene>
+        <!--rankView-->
+        <scene sceneID="o7Z-Pe-pdS">
+            <objects>
+                <viewController storyboardIdentifier="rankView" title="rankView" id="COg-U4-ck4" customClass="RankViewController" customModule="iKnow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9h4-je-LN8"/>
+                        <viewControllerLayoutGuide type="bottom" id="AG7-vk-h6j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8c3-e8-0W9">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyBackground" translatesAutoresizingMaskIntoConstraints="NO" id="rdR-Rh-D0u">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ranking" translatesAutoresizingMaskIntoConstraints="NO" id="qIa-mO-rMv">
+                                <rect key="frame" x="531" y="68" width="858" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="y5K-dK-KzL" userLabel="rankingTable">
+                                <rect key="frame" x="460" y="312" width="1000" height="700"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="playerRankingCell" rowHeight="100" id="Ndj-5t-8jI" userLabel="playerRankingCell" customClass="RankingCellPrototypeTableViewCell" customModule="iKnow" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="66" width="1000" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ndj-5t-8jI" id="u4r-we-fkY">
+                                            <rect key="frame" x="0.0" y="0.0" width="1000" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="color0" translatesAutoresizingMaskIntoConstraints="NO" id="TLC-MF-QMi" userLabel="playerColor">
+                                                    <rect key="frame" x="8" y="0.0" width="80" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5x-8E-4b0" userLabel="playerScore">
+                                                    <rect key="frame" x="808" y="-4" width="184" height="88"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="KGInimitableOriginal" family="KG Inimitable Original" pointSize="70"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nc-66-HTJ" userLabel="playerName">
+                                                    <rect key="frame" x="120" y="-4" width="703" height="104"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="KGInimitableOriginal" family="KG Inimitable Original" pointSize="70"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="playerColor" destination="TLC-MF-QMi" id="Rv9-pd-mX1"/>
+                                            <outlet property="playerName" destination="5Nc-66-HTJ" id="MSE-xZ-PwH"/>
+                                            <outlet property="playerScore" destination="j5x-8E-4b0" id="XoF-1g-csy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="rankingTable" destination="y5K-dK-KzL" id="bWL-vm-6ne"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="backToFirstViewSegue" id="E5V-n2-PPG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ua-LV-eyA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7786" y="-176"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="10" width="512" height="512"/>
+        <image name="choosedCategory" width="3340" height="685"/>
+        <image name="color0" width="224" height="224"/>
+        <image name="emptyBackground" width="1920" height="1080"/>
+        <image name="iKnowTvBackground" width="1920" height="1080"/>
+        <image name="ranking" width="1322" height="394"/>
+        <image name="wait1" width="2655" height="276"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="pfE-Ti-dW3"/>
+    </inferredMetricsTieBreakers>
+</document>
